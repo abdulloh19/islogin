@@ -2,24 +2,29 @@ import React from "react";
 import "./App.css";
 
 class App extends React.Component {
-  state = {
-    active: true,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: true,
+    };
+  }
 
   changeActive = () => {
-    this.setState = {
-      active: !this.state.active,
-    };
+    this.setState({ active: false });
+  };
+  changeActiveFalse = () => {
+    this.setState({ active: true });
   };
 
   render() {
+    const { active } = this.state;
     return (
       <div className="container mt-4">
-        {this.state.active ? (
+        {active ? (
           <div>
             <h3>Welcome</h3>
             <button
-              className="btn btn-outline-dark"
+              className="btn btn-outline-danger"
               onClick={this.changeActive}
             >
               Logout
@@ -30,7 +35,7 @@ class App extends React.Component {
             <h3>Login</h3>
             <button
               className="btn btn-outline-danger"
-              onClick={this.changeActive}
+              onClick={this.changeActiveFalse}
             >
               Login
             </button>
