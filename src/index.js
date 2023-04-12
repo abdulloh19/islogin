@@ -7,6 +7,7 @@ import Counter from "./counter";
 import TableArmiya from "./table-armiya";
 import Arr from "./arr";
 import Secondamer from "./sekondamer";
+import Timer from "./timer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,6 +16,7 @@ root.render(
     {/* <Counter /> */}
     {/* <TableArmiya /> */}
     {/* <Arr /> */}
-    <Secondamer />  
+    {/* <Secondamer />   */}
+    <Timer />
   </React.StrictMode>
 );

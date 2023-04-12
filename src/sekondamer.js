@@ -31,7 +31,7 @@ class Secondamer extends React.Component {
           second: second + 1,
         });
       }
-    }, 100);
+    }, 1000);
 
     this.setState({
       disabled: true,
@@ -54,15 +54,15 @@ class Secondamer extends React.Component {
     });
   };
 
-  onRestartClicked=() => {
-    this.onStop()
+  onRestartClicked = () => {
+    this.onStop();
     this.setState({
-        hour:0,
-        minute:0,
-        second:0,
-        savedIntervals:[]
-    })
-  }
+      hour: 0,
+      minute: 0,
+      second: 0,
+      savedIntervals: [],
+    });
+  };
 
   render() {
     const { hour, minute, second, disabled, savedIntervals } = this.state;
@@ -80,7 +80,7 @@ class Secondamer extends React.Component {
                 </h3>
               </div>
               <div className="card-footer">
-                <div className="row">
+                <div className="row"  >
                   <div className="col-md-3">
                     <button
                       className="btn  btn-success"
@@ -105,7 +105,12 @@ class Secondamer extends React.Component {
                     </button>
                   </div>
                   <div className="col-md-3">
-                    <button className="btn  btn-danger" onClick={this.onRestartClicked}>Restart</button>
+                    <button
+                      className="btn  btn-danger"
+                      onClick={this.onRestartClicked}
+                    >
+                      Restart
+                    </button>
                   </div>
                 </div>
               </div>
