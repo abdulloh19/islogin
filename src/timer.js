@@ -169,6 +169,7 @@ class Timer extends React.Component {
                     <button
                       className="btn btn-outline-secondary"
                       onClick={this.onIntervlaClicked}
+                      disabled={!disabled}
                     >
                       Interval
                     </button>
